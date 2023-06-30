@@ -1,0 +1,16 @@
+:host {
+
+
+    form {
+        width: 400px;
+        padding-top: 100px;
+
+        .btn-primary{
+            margin-right: 10px;
+        }
+
+        input.ng-invalid{
+            border-color: red;
+        }
+    }
+}
