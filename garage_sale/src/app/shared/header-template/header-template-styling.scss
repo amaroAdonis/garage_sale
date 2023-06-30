@@ -8,34 +8,57 @@
         column-gap: 30px;
         box-sizing: border-box;
         align-items: center;
-        
+        justify-content: space-between;  
+        background: rgb(248, 248, 248);
+        width: 100%;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
-    background: rgb(248, 248, 248);
-    width: 100%;
+        & > div {
+            display: flex;
+            align-items: center;
+        }
 
-    .logo{
-        .logo-img{
-            width: 120px;
+        .logo{
+            .logo-img{
+                width: 120px;
+                cursor: pointer;
+            }
+        }
+
+        .localização{
+            padding-left: 0.5rem;
+        }
+
+        .searchbar{
+            padding-right: 40px;
+            padding-left: 20px;
+        }
+
+        .login{
+            align-items: center;
+            text-align: center;
+            .username{
+                align-items: center;
+                text-align: center;
+            }
+        }
+
+        nav {
+            padding: 0 40px;
+
+            .categorias{
+                padding: 0 10px;
+            }
+            .produtos{
+                padding: 0 10px;
+            }
+            .garagens{
+                padding: 0 10px;
+            }
+        }
+
+        .cart {
+            padding-right: 30px;
         }
     }
-
-    }
-
-    nav {
-        padding: 0 40px;
-
-        .categorias{
-            padding: 0 10px;
-        }
-        .produtos{
-            padding: 0 10px;
-        }
-        .garagens{
-            padding: 0 10px;
-        }
-    }
-
-
-
-
 }

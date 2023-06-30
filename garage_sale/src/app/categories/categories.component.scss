@@ -1,0 +1,43 @@
+:host {
+
+    h2 {
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+        margin-bottom: 30px;
+        margin-top: 30px;
+    }
+    
+    .category-list {
+
+        display: flex;
+        flex-flow: row-reverse wrap;
+        padding: 50px, 80px, 50px, 80px;
+        justify-content: space-around;
+
+
+        
+        li {
+
+            padding: 10px;
+            margin: 10px;
+            cursor: pointer;        
+        }
+
+        li:hover {
+            background: #a5b6c4;
+            border-radius: 10px;
+            font-size: 102%;
+            font-weight: bold;
+
+          }
+        
+        
+
+        
+    }
+
+
+
+
+}
