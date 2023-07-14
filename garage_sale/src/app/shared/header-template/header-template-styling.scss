@@ -1,64 +1,374 @@
 :host {
-    display: contents;
+    
 
-    header {
-        height: 100px;
-        padding: 0 20px;
-        display: flex;
-        column-gap: 30px;
-        box-sizing: border-box;
-        align-items: center;
-        justify-content: space-between;  
-        background: rgb(248, 248, 248);
-        width: 100%;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
-        & > div {
+    @media screen and (max-width: 900px) {
+        header {
+            height: 50px;
+            padding: 0px 20px;
             display: flex;
+            column-gap: 30px;
+            box-sizing: border-box;
             align-items: center;
-        }
-
-        .logo{
-            .logo-img{
-                width: 120px;
-                cursor: pointer;
+            justify-content: space-between;  
+            background: rgb(217, 196, 60);
+            width: 100%;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+            
+    
+            .logo{
+                width: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                
+                .logo-img{
+                    width: 50px;
+                    cursor: pointer;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                
+                &.active, &:hover {
+                    color: #ffffff;
+                    background-color: #000000;
+                    border-radius: 25px;
+                    align-items: center;
+                    justify-content: center;
+                }
+    
+                
             }
-        }
-
-        .localização{
-            padding-left: 0.5rem;
-        }
-
-        .searchbar{
-            padding-right: 40px;
-            padding-left: 20px;
-        }
-
-        .login{
-            align-items: center;
-            text-align: center;
-            .username{
+    
+            .localização{
+                display: none;
+                padding-left: 0.1rem;
+                font-size: small;
+            }
+    
+            input {
+    
+                border-radius: 15px;
+                
+            }
+    
+            .searchbar{
+                padding-right: 15px;
+                padding-left: 15px;
+            }
+    
+            .login{
+                cursor: pointer;
+                display: flex;
+                flex-direction: row-reverse;
+                margin: 10px;
                 align-items: center;
                 text-align: center;
+                text-decoration: none;
+                padding: 5px;
+    
+                a{
+                    text-decoration: none;
+                    padding-left: 5px;
+                    color: #000000;
+    
+                }
             }
+    
+            .cart {
+                padding: 5px 5px;
+                text-decoration: none;
+                margin: 10px 10px;
+                a {
+                    text-decoration: none;
+                    padding: 5px;
+                }
+            }
+
+            .menu{
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                cursor: pointer;
+                i{
+                    
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    &.active, &:hover {
+                        color: #ffffff;
+                        background-color: #000000;
+                        border-radius: 25px;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                    
+                }
+                .dropdown.active{
+                    display: block;
+                }
+                .dropdown{
+                    margin-top: 100%;
+                    display: none;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    background: #000;
+                    a{
+                        display: inline-block;
+                    }
+
+                }
+                
+            }
+
+            .left-items{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                
+            }
+    
+            nav {
+                
+
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-end;
+                
+                
+                    a {
+                        display: flex;
+                        color: black;
+                    &.active, &:hover {
+                        color: rgb(217, 196, 60);
+                        background-color: #000000;
+                        border-radius: 5px;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                }
+                
+                .categorias{
+                    padding: 2px;
+                    text-decoration: none;
+                    margin: 2px;
+                }
+                .produtos{
+                    padding: 2px;
+                    text-decoration: none;
+                    margin: 2px;
+                }
+                .garagens{
+                    padding: 2px;
+                    text-decoration: none;
+                    margin: 2px;
+                }
+    
+            }
+    
+            .right-items {
+                display: flex;
+                align-items: center;
+                .cart{
+                    a{
+                        color: #000000;
+                        &.active {
+                            background-color: #000000;
+                            border-radius: 5px;
+                            align-items: center;
+                            justify-content: center;
+                            padding: 8px;
+                            color: rgb(217, 196, 60);
+                        }
+                    }
+                
+                }
+    
+                .login{
+                    &.active, &:hover {
+                        background-color: #000000;
+                        border-radius: 5px;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 5px;
+                        color: rgb(217, 196, 60);
+                    }
+                    .username {
+                        &:hover {
+                            align-items: center;
+                            justify-content: center;
+                            color: rgb(217, 196, 60);
+                        }
+                    }
+    
+                }
+            }
+            
         }
 
-        nav {
-            padding: 0 40px;
 
-            .categorias{
-                padding: 0 10px;
-            }
-            .produtos{
-                padding: 0 10px;
-            }
-            .garagens{
-                padding: 0 10px;
-            }
-        }
-
-        .cart {
-            padding-right: 30px;
-        }
+        
     }
+
+    @media screen and (min-width: 901px) {
+        header {
+
+            .menu{
+                display: none;
+            }
+            height: 100px;
+            padding: 0px 20px;
+            display: flex;
+            column-gap: 30px;
+            box-sizing: border-box;
+            align-items: center;
+            justify-content: space-between;  
+            background: rgb(217, 196, 60);
+            width: 100%;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+            & > div {
+                display: flex;
+                align-items: center;
+            }
+    
+            .logo{
+                .logo-img{
+                    width: 100px;
+                    cursor: pointer;
+                }
+                
+                &.active, &:hover {
+                    color: #ffffff;
+                    background-color: #000000;
+                    border-radius: 25px;
+                    align-items: center;
+                    justify-content: center;
+                }
+    
+                
+            }
+    
+            .localização{
+                display: block;
+                padding-left: 0.1rem;
+                font-size: small;
+            }
+    
+            input {
+    
+                border-radius: 15px;
+                
+            }
+    
+            .searchbar{
+                padding-right: 15px;
+                padding-left: 15px;
+            }
+    
+            .login{
+                cursor: pointer;
+                display: flex;
+                flex-direction: row-reverse;
+                margin: 10px;
+                align-items: center;
+                text-align: center;
+                text-decoration: none;
+                padding: 5px;
+    
+                a{
+                    text-decoration: none;
+                    padding-left: 5px;
+                    color: #000000;
+    
+                }
+            }
+    
+            .cart {
+                padding: 5px 5px;
+                text-decoration: none;
+                margin: 10px 10px;
+                a {
+                    text-decoration: none;
+                    padding: 5px;
+                }
+            }
+    
+            nav {
+                
+                padding: 0px 20px 0px 40px;
+                
+                    a {
+                        color: black;
+                    &.active, &:hover {
+                        color: rgb(217, 196, 60);
+                        background-color: #000000;
+                        border-radius: 5px;
+                        align-items: center;
+                    }
+                }
+                
+                .categorias{
+                    padding: 5px 5px;
+                    text-decoration: none;
+                    margin: 0px 5px;
+                }
+                .produtos{
+                    padding: 5px 5px;
+                    text-decoration: none;
+                    margin: 0px 5px;
+                }
+                .garagens{
+                    padding: 5px 5px;
+                    text-decoration: none;
+                    margin: 0px 5px;
+                }
+    
+            }
+    
+            .right-items {
+                .cart{
+                    a{
+                        color: #000000;
+                        &.active {
+                            background-color: #000000;
+                            border-radius: 5px;
+                            align-items: center;
+                            justify-content: center;
+                            padding: 8px;
+                            color: rgb(217, 196, 60);
+                        }
+                    }
+                
+                }
+    
+                .login{
+                    &.active, &:hover {
+                        background-color: #000000;
+                        border-radius: 5px;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 5px;
+                        color: rgb(217, 196, 60);
+                    }
+                    .username {
+                        &:hover {
+                            align-items: center;
+                            justify-content: center;
+                            color: rgb(217, 196, 60);
+                        }
+                    }
+    
+                }
+            }
+            
+        }
+        
+    }
+    
+
 }

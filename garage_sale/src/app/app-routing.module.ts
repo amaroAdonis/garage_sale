@@ -34,15 +34,42 @@ const routes: Routes = [
         {
           path:"carrinho",
           loadChildren: () => import("./cart-screen/cart-screen.module").then(m => m.CartScreenModule)
-
+        },
+        {
+          path:"novo-usuario",
+          loadChildren: () => import("./create-user/create-user.module").then(m => m.CreateUserModule)
+        },
+        {
+          path: "admin",
+          loadChildren: () => import("./admin/admin.module").then(m => m.AdminModule)
+        },
+        {
+          path: "garagem",
+          loadChildren: () => import("./garage-screen/garage-screen.module").then(m => m.GarageScreenModule)
+        },
+        {
+          path: "produto",
+          loadChildren: () => import("./product-page/product-page.module").then(m => m.ProductPageModule)
+        },
+        {
+          path: "chat",
+          loadChildren: () => import("./chat-screen/chat-screen.module").then(m => m.ChatScreenModule)
+        },
+        {
+          path: "novo-produto",
+          loadChildren: () => import("./admin/new-product/new-product.module").then(m => m.NewProductModule)
+        },
+        {
+          path: "dashboard",
+          loadChildren: () => import("./admin/dashboard/dashboard.module").then(m => m.DashboardModule)
+        },
+        {
+          path: "garagem-nova",
+          loadChildren: () => import("./admin/new-garage/new-garage.module").then(m => m.NewGarageModule)
         }
-
       ]
     },
-    {
-      path: "admin",
-      loadChildren: () => import("./admin/admin.module").then(m => m.AdminModule)
-    },
+
     {
       path:"404", component:ErrorsPageComponent
     },

@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class CreateUserComponent {
 
+  
+  public Submit():void {}
+
 }

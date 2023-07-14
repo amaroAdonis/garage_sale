@@ -1,5 +1,11 @@
 
+<div class="title">
+  <h2>Faça seu login ou cadastre-se:</h2>
+</div>
+
 <form class="container" >
+ 
+
     <div class="mb-3">
       <label for="exampleInputEmail1" class="form-label">Email address</label>
       <input type="email" class="form-control" formControlName="email" id="exampleInputEmail1">
@@ -11,3 +17,9 @@
     <button type="button" class="btn btn-primary" (click)="login()">Submit</button>
     <button type="cancel" class="btn btn-secondary">Cancel</button>
 </form>
+
+<div class="link-above">
+  <a class="sign" routerLinkActive="active" routerLink="/novo-usuario">Cadastre-se</a>
+  <a >|</a>
+  <a class="forget" routerLinkActive="active" routerLink="/forget-password">Esqueceu a senha?</a>
+</div>

@@ -35,10 +35,13 @@
                 padding: 8px;
                 justify-content: center;
             }
-        }
-        .card.mb-3:hover{
-            transform: translateX(3px);
-            transform: translateY(3px);
+            &.active, &:hover {
+                background-color: #d9d93a88;
+                border-radius: 5px;
+                align-items: center;
+                justify-content: center;
+                padding: 5px;
+            }
         }
     }
 

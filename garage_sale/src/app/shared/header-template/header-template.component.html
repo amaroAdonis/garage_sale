@@ -1,26 +1,35 @@
 <header>
+
+    <div class="logo">
+        <img routerLink="" class="logo-img" src="assets/imgs/logo.png" alt="">
+    </div>
+
+    
     
     <div class="left-itens">
-        <div class="logo">
-            <img routerLink="" class="logo-img" src="assets/imgs/logo.png" alt="">
-        </div>
+        
         <div class="localização">
             <i class="fa-solid fa-location-pin" style="color: #1d7db9;"></i>
             Cidade/UF
         </div>
+
+        
     
     
-        <nav>
+        <nav id="items">
+            
             <a class="categorias" routerLinkActive="active" routerLink="/categorias">Categorias</a>
             <a class="produtos" routerLinkActive="active" routerLink="/produtos">Produtos</a>
             <a class="garagens" routerLinkActive="active" routerLink="/garagens">Garagens</a>
         </nav>
     </div>
+
+    
     
     <div class="right-items">
         
         <div class="searchbar">
-            <input type="text" name="searchbar" id="" placeholder="Busque...">
+            <input type="search" name="" id="" placeholder=" Busque...">
         </div>
         
         <div class="cart">
@@ -28,10 +37,20 @@
                 <i class="fa-solid fa-cart-shopping fa-lg"></i>
             </a>
         </div>
-        <div class="login">
-            <a class="username" routerLinkActive="active" routerLink="/login">
-                <i class="fa-solid fa-user fa-lg"></i><br>
-                Login</a>
+        <div class="login" routerLinkActive="active" routerLink="/login">
+            <a class="username">Login</a>
+            <i class="fa-solid fa-user fa-lg"></i>
+        </div>
+
+        <div class="menu">
+            <i class="fa-solid fa-bars" (click)="clickMenu()"></i>
+            <div class="dropdown" [ngClass]="{active: menuActive}">
+                
+                    <a class="categorias" routerLinkActive="active" routerLink="/categorias">Categorias</a>
+                    <a class="produtos" routerLinkActive="active" routerLink="/produtos">Produtos</a>
+                    <a class="garagens" routerLinkActive="active" routerLink="/garagens">Garagens</a>
+                
+            </div>
         </div>
 
     </div>

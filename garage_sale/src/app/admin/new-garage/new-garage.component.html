@@ -1,1 +1,58 @@
-<p>new-garage works!</p>
+
+<div class="title">
+    <h2>Vamos criar a sua garagem?</h2>
+</div>
+
+<div class="container">
+    
+    <div class="garage-name">
+        <div class="name">
+            <label for="textdescription" class="garage">Nome da garagem</label>
+            <input id="textdescription" type="text" class="form-control" placeholder="Crie um nome para sua garagem...">
+        </div>
+    </div>
+    
+    <div class="description">
+        <div class="description-text">
+            <label for="floatingTextarea2">Descrição</label>
+            <textarea class="form-control" placeholder="Insira uma descrição para a sua garagem..." id="floatingTextarea2"></textarea>
+        </div>
+    </div>
+
+    <div class="adress">
+        <div class="adress-input">
+            <label for="cep">CEP</label>
+            <input class="form-control" type="number" name="cep" id="cep">
+        </div>
+    </div>
+    <div class="adress-board">
+        <div class="adress-box">
+            
+            <ul>
+                <li>Bairro: </li>
+                <li>Cidade: </li>
+                <li>Estado: </li>
+            </ul>
+            
+        </div>
+
+    </div>
+
+    <div class="upload-images">
+        <div class="profile-img">
+            <label for="profile">Adicione uma imagem para sua garagem</label>
+            <input id="profile" type="file" accept=".gif, .jpg, .jpeg, .png" multiple="">
+        </div>
+        <div class="profile-bckg-img">
+            <label for="bckg-img">Adicione uma imagem de fundo a sua garagem</label>
+            <input type="file" accept=".gif, .jpg, .jpeg, .png" multiple="">
+        </div>
+    </div>
+
+    <div class="buttons">
+        <button type="button" class="btn btn-primary" (click)="submit()">Submit</button>
+        <button type="cancel" class="btn btn-secondary">Cancel</button>
+    </div>
+    
+
+</div>

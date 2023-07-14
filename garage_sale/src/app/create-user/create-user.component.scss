@@ -1,0 +1,61 @@
+:host {
+
+    
+
+    h2{
+        display: flex;
+        justify-content: center;
+        padding-top: 4rem;
+    }
+
+    .container{
+        background-color: rgba(167, 167, 167, 0.082);
+        border-radius: 1rem;
+        
+        padding-top: 3rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-bottom: 2rem;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 80rem;
+
+        .mb-3{
+            display: flex;
+            width: 28rem;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding-left: 3rem;
+            padding-right: 2rem;
+        }
+
+        .buttons{
+            
+            padding-top: 3rem;
+            display: flex;
+            justify-content: flex-end;
+            width: 100%;
+            margin: 0 3rem;
+
+
+
+            .btn.btn-primary{
+                margin-right: 0.7rem;
+                width: 12rem;
+            }
+    
+            .btn.btn-secondary{
+                width: 8rem;
+            }
+        }
+
+    }
+
+   
+
+
+
+
+
+}

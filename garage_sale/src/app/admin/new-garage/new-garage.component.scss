@@ -1,0 +1,102 @@
+:host{
+
+    .title{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 50px;
+    }
+
+    .container{
+
+        .garage-name{
+
+            .name{
+                label{
+                    font-weight: 600;
+                }
+            }
+
+            margin-bottom: 30px;
+        }
+
+        .description{
+
+            .description-text{
+                label{
+                    font-weight: 600;
+                }
+
+                textarea{
+                    height: 100px;
+                }
+            }
+            margin-bottom: 30px;
+        }
+
+        .adress{
+
+            .adress-input{
+                label{
+                    font-weight: 600;
+                }
+            }
+            margin-bottom: 30px;
+        }
+
+        .adress-board{
+            margin-bottom: 30px;
+
+            .adress-box{
+                
+                padding-top: 10px;
+                margin-top: 30px;
+                border-style: dashed;
+                border-width: 2px;
+                border-radius: 10px;
+                width: 60%;
+
+                li{
+                    padding-top: 5px;
+                }
+
+            }
+        }
+
+        .upload-images{
+
+            .profile-img{
+                display: flex;
+                flex-direction: column;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                font-weight: 600;
+
+            }
+
+            .profile-bckg-img{
+                display: flex;
+                flex-direction: column;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                font-weight: 600;
+            }
+
+
+        }
+
+        .buttons{
+            padding-top: 30px;
+            
+
+            .btn.btn-primary{
+                margin-right: 10px;
+                width: 200px;
+            }
+        }
+
+    }
+    
+
+
+}

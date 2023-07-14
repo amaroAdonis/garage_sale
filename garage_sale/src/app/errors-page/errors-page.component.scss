@@ -1,6 +1,22 @@
 :host {
 
+    a {
+        display: flex;
+        padding: 10px;
+        cursor: pointer;
+        background-color: rgb(0, 51, 114);
+        color: aliceblue;
+        border-radius: 10px;
+        font-weight: 300px;
+    }
+
+    .title{
+    padding-top: 10%;
+    display: flex;
     align-items: center;
     justify-content: center;
+    }
+
+    
 
 }
