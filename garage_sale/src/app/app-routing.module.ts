@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HeaderTemplateComponent } from './shared/header-template/header-template.component';
-import { ErrorsPageComponent } from './errors-page/errors-page.component';
+import { HeaderTemplateComponent } from './components/header-template/header-template.component';
+import { ErrorsPageComponent } from './pages/errors-page/errors-page.component';
 
 const routes: Routes = [
     {
@@ -13,31 +13,31 @@ const routes: Routes = [
         },
         {
           path: "",
-          loadChildren: () => import("./home/home.module").then(m => m.HomeModule)
+          loadChildren: () => import("./pages/home/home.module").then(m => m.HomeModule)
         },
         {
           path: "categorias",
-          loadChildren: () => import("./categories/categories.module").then(m => m.CategoriesModule)
+          loadChildren: () => import("./pages/categories/categories.module").then(m => m.CategoriesModule)
         },
         {
           path:"produtos",
-          loadChildren: () => import("./products/products.module").then(m => m.ProductModule)
+          loadChildren: () => import("./pages/products/products.module").then(m => m.ProductModule)
         },
         {
           path:"garagens",
-          loadChildren: () => import("./garages/garages.module").then(m => m.GaragesModule)
+          loadChildren: () => import("./pages/garages/garages.module").then(m => m.GaragesModule)
         },
         {
           path:"login",
-          loadChildren: () => import("./login/login.module").then(m => m.LoginModule)
+          loadChildren: () => import("./pages/login/login.module").then(m => m.LoginModule)
         },
         {
           path:"carrinho",
-          loadChildren: () => import("./cart-screen/cart-screen.module").then(m => m.CartScreenModule)
+          loadChildren: () => import("./pages/cart-screen/cart-screen.module").then(m => m.CartScreenModule)
         },
         {
           path:"novo-usuario",
-          loadChildren: () => import("./create-user/create-user.module").then(m => m.CreateUserModule)
+          loadChildren: () => import("./pages/create-user/create-user.module").then(m => m.CreateUserModule)
         },
         {
           path: "admin",
@@ -45,15 +45,15 @@ const routes: Routes = [
         },
         {
           path: "garagem",
-          loadChildren: () => import("./garage-screen/garage-screen.module").then(m => m.GarageScreenModule)
+          loadChildren: () => import("./pages/garage-screen/garage-screen.module").then(m => m.GarageScreenModule)
         },
         {
           path: "produto",
-          loadChildren: () => import("./product-page/product-page.module").then(m => m.ProductPageModule)
+          loadChildren: () => import("./pages/product-page/product-page.module").then(m => m.ProductPageModule)
         },
         {
           path: "chat",
-          loadChildren: () => import("./chat-screen/chat-screen.module").then(m => m.ChatScreenModule)
+          loadChildren: () => import("./pages/chat-screen/chat-screen.module").then(m => m.ChatScreenModule)
         },
         {
           path: "novo-produto",

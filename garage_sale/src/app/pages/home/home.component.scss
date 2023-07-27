@@ -1,0 +1,43 @@
+:host {
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+
+    }
+    
+    
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .garages-carousel{
+            
+            ngb-carousel{
+                width: 200px;
+                height: 200px;
+
+                ng-template{
+
+                    .picsum-img-wrapper{
+                        img{
+                            width: 200px;
+                            height: 200px;
+                        }
+                    }
+
+                }
+            }
+
+        }
+   
+    }
+}
+    
+
+
+
+
+
+

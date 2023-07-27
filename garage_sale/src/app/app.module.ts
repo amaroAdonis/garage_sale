@@ -3,8 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SharedModule } from './shared/shared.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HeaderTemplateModule } from './components/header-template/header-template.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 
 
@@ -16,9 +18,12 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SharedModule,
-    NgbModule
+    NgbModule,
+    HeaderTemplateModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
+  
   providers: [],
   bootstrap: [AppComponent]
 })

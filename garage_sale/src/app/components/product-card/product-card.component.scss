@@ -1,0 +1,32 @@
+:host {
+
+    .card.mb-3{
+        width: 250px;
+        height: 250px;
+
+        .card-title{
+            cursor: pointer;
+            display: flex;
+            align-self: center;
+        }
+        .card-img-top{
+            cursor: pointer;
+            height: 130px;
+            width: 250px;
+        }
+        .card-text{
+            margin-bottom: 0.5rem;
+        }
+        .card-body{
+            padding: 8px;
+            justify-content: center;
+        }
+        &.active, &:hover {
+            background-color: #d9d93a88;
+            border-radius: 5px;
+            align-items: center;
+            justify-content: center;
+            padding: 5px;
+        }
+    }
+}
