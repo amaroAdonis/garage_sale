@@ -24,13 +24,20 @@ public class UserDao {
       user.setFirstName(resultSet.getString("first_name"));
       user.setLastName(resultSet.getString("last_name"));
       user.setEmail(resultSet.getString("email"));
-      user.setBirthday(resultSet.getDate("birthday"));
+      user.setBirthday(resultSet.getString("birthday"));
       user.setUf(resultSet.getString("uf"));
       user.setCity(resultSet.getString("city"));
       user.setProfileImage("profile_image");
 
       return user;
 
+    }
+
+    public void NewUser(User user) {
+        String sql = "INSERT INTO user(username, first_name, last_name, email, birthday, uf, city, profile_image) " +
+                "values(?, ?, ?, ?, ?, ?, ?, ?)";
+        jdbcTemplate.update(sql, user.getUserName(), user.getFirstName(), user.getLastName(),
+                user.getEmail(), user.getBirthday(), user.getUf(), user.getCity(), user.getProfileImage());
     }
 
     public List<User> findAll() {

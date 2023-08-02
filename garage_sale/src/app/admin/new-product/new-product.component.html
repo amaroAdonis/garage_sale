@@ -1,90 +1,99 @@
-
-<h3>O que você quer vender?</h3>
-
 <div class="container">
-    
-    <div class="row">
-        <div class="col">
-            <h5>Selecione uma categoria</h5>
-                <select class="items"> 
-                    <option></option>
-                    <option>Auto peças</option>
-                    <option>Móveis</option>
-                    <option>Eletrodomésticos</option>
-                    <option>Materiais de construção e Jardim</option>
-                    <option>Utilidades domésticas</option>
-                    <option>Objetos de decoração</option>
-                    <option>Eletroportáteis</option>
-                    <option>Video Games</option>
-                    <option>Computadores e acessórios</option>
-                    <option>Celulares e telefonia</option>
-                    <option>Audio, TV, video e fotografia</option>
-                    <option>Instrumentos musicais</option>
-                    <option>CDs, DVDs, etc</option>
-                    <option>Livros e revistas</option>
-                    <option>Antiguidades</option>
-                    <option>Hobbies e coleções</option>
-                    <option>Esportes e ginástica</option>
-                    <option>Artigos Infantis</option>
-                    <option>Acessórios para animais de estimação</option>
-                    <option>Beleza e saúde</option>
-                    <option>Roupas e calçados</option>
-                    <option>Bolsas, malas e mochilas</option>
-                    <option>Bijouterias, relógios e acessórios</option>
-                    <option>Itens de escritório</option>
-                </select>
-        </div>
+    <div class="title">
+        <h3>O que você quer vender?</h3>
     </div>
-    
-    <div class="title-container">
-        <h5>Título</h5>
-        <input type="text" class="Title" placeholder="  Insira um título">
-    </div>
-
-    <div class="description">
-        <h5>Descrição</h5>
-        <textarea name="description" id="" cols="30" rows="10"></textarea>
-    </div>
-
-    <div class="value">
-        <h5>Valor</h5>
-        <input type="text" class="Title" placeholder="  R$ ">
-    </div>
-
-    <div class="upload-images">
-        <input type="file" accept=".gif, .jpg, .jpeg, .png" multiple="">
-    </div>
-
-    <div class="extra-data">
+    <div [formGroup]="form" class="form">
+        <div class="left-itens">
+            <div class="row">
+                <div class="col">
+                    <h5>Selecione uma categoria</h5>
+                        <select class="items"> 
+                            <option></option>
+                            <option>Auto peças</option>
+                            <option>Móveis</option>
+                            <option>Eletrodomésticos</option>
+                            <option>Materiais de construção e Jardim</option>
+                            <option>Utilidades domésticas</option>
+                            <option>Objetos de decoração</option>
+                            <option>Eletroportáteis</option>
+                            <option>Video Games</option>
+                            <option>Computadores e acessórios</option>
+                            <option>Celulares e telefonia</option>
+                            <option>Audio, TV, video e fotografia</option>
+                            <option>Instrumentos musicais</option>
+                            <option>CDs, DVDs, etc</option>
+                            <option>Livros e revistas</option>
+                            <option>Antiguidades</option>
+                            <option>Hobbies e coleções</option>
+                            <option>Esportes e ginástica</option>
+                            <option>Artigos Infantis</option>
+                            <option>Acessórios para animais de estimação</option>
+                            <option>Beleza e saúde</option>
+                            <option>Roupas e calçados</option>
+                            <option>Bolsas, malas e mochilas</option>
+                            <option>Bijouterias, relógios e acessórios</option>
+                            <option>Itens de escritório</option>
+                        </select>
+                </div>
+            </div>
+            <div class="title-container">
+                <h5>Título</h5>
+                <input formControlName="title" type="text" class="Title" placeholder="  Insira um título">
+            </div>
         
-        <div class="check">
-            <input type="checkbox" name="delivery" id="delivery">
-            <label for="delivery">Realiza entrega ou envio</label>
+            <div class="description">
+                <h5>Descrição</h5>
+                <textarea name="description" id="" cols="30" rows="10"></textarea>
+            </div>
+        
+            <div class="value">
+                <h5>Valor</h5>
+                <input formControlName="price" type="text" class="Title" placeholder="  R$ ">
+            </div>
         </div>
+        <div class="right-itens">
+            <div class="upload-images">
+                <input type="file" accept=".gif, .jpg, .jpeg, .png" multiple="">
+                <input type="file" accept=".gif, .jpg, .jpeg, .png" multiple="">
+                <input type="file" accept=".gif, .jpg, .jpeg, .png" multiple="">
+                <input type="file" accept=".gif, .jpg, .jpeg, .png" multiple="">
+            </div>
+        
+            <div class="extra-data">
+                
+                <div class="check">
+                    <input type="checkbox" name="delivery" id="delivery">
+                    <label for="delivery">Realiza entrega ou envio</label>
+                </div>
+        
+                <div class="check">
+                    <input type="checkbox" name="nodelivery" id="nodelivery">
+                    <label for="nodelivery">Somente para retirada no local</label>
+                </div>
+                <div class="check">
+                    <input type="checkbox" name="new" id="new">
+                    <label for="label">Novo</label>
+                </div>
+        
+                <div class="check">
+                    <input type="checkbox" name="used" id="used">
+                    <label for="used">Usado</label>
+                </div>
+        
+                <div class="check">
+                    <input type="checkbox" name="nf" id="nf">
+                    <label for="nf">Com nota fiscal</label>
+                </div>
+            </div>
+        
+            <div class="buttons">
+                <button type="button" class="btn btn-primary" (click)="submit()">Submit</button>
+                <button type="cancel" class="btn btn-secondary">Cancel</button>
+            </div>
+        </div>
+    
 
-        <div class="check">
-            <input type="checkbox" name="nodelivery" id="nodelivery">
-            <label for="nodelivery">Somente para retirada no local</label>
-        </div>
-        <div class="check">
-            <input type="checkbox" name="new" id="new">
-            <label for="label">Novo</label>
-        </div>
-
-        <div class="check">
-            <input type="checkbox" name="used" id="used">
-            <label for="used">Usado</label>
-        </div>
-
-        <div class="check">
-            <input type="checkbox" name="nf" id="nf">
-            <label for="nf">Com nota fiscal</label>
-        </div>
     </div>
-
-    <div class="buttons">
-        <button type="button" class="btn btn-primary" (click)="submit()">Submit</button>
-        <button type="cancel" class="btn btn-secondary">Cancel</button>
-    </div>
+    
 
 </div>

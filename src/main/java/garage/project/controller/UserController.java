@@ -4,16 +4,13 @@ import garage.project.dao.UserDao;
 import garage.project.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.sql.SQLException;
 import java.util.List;
 
 @RestController
-@RequestMapping("/user")
+@RequestMapping("api/user")
 public class UserController {
 
     @Autowired
@@ -27,6 +24,10 @@ public class UserController {
         return userDao.findById(id);
     }
 
+    @PostMapping("")
+    public void createUser(@RequestBody User user) {
+        userDao.NewUser(user);
+    }
 
 
 

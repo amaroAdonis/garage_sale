@@ -6,15 +6,17 @@ public class PurchaseItens {
     private Integer purchaseId;
     private Double quantity;
     private Double price;
+    private Double discount;
 
     public PurchaseItens() {
     }
 
-    public PurchaseItens(Integer productId, Integer purchaseId, Double quantity, Double price) {
+    public PurchaseItens(Integer productId, Integer purchaseId, Double quantity, Double price, Double discount) {
         this.productId = productId;
         this.purchaseId = purchaseId;
         this.quantity = quantity;
         this.price = price;
+        this.discount = discount;
     }
 
     public Integer getProductId() {
@@ -47,5 +49,13 @@ public class PurchaseItens {
 
     public void setPrice(Double price) {
         this.price = price;
+    }
+
+    public Double getDiscount() {
+        return discount;
+    }
+
+    public void setDiscount(Double discount) {
+        this.discount = discount;
     }
 }

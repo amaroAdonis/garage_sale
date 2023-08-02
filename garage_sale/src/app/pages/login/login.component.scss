@@ -1,35 +1,33 @@
 :host {
 
-    .title{
-        padding-top: 5rem;
-        display: flex;
-        justify-content: center;
+    .container{
+        width: 500px;
+        
 
-    }
-
-
-    form {
-        width: 400px;
-        padding-top: 1rem;
-
-        .btn-primary{
-            margin-right: 10px;
+        .form{
+            .title{
+               
+                display: flex;
+                justify-content: center;
+        
+            }
+            
+            .btn-primary{
+                margin-right: 10px;
+            }
+            input.ng-invalid{
+                border-color: red;
+            }
+        }
+        .link-above{
+            display: flex;
+            justify-content: center;
+            a{
+                margin-top: 10px;
+                padding: 5px;
+            }
         }
 
-        input.ng-invalid{
-            border-color: red;
-        }
     }
-
-    .link-above{
-        display: flex;
-        justify-content: center;
-     
-        a{
-            margin-top: 10px;
-            padding: 5px;
-        }
-    }
-
 
 }

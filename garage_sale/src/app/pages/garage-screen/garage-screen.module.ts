@@ -3,6 +3,7 @@ import { GarageScreenComponent } from "./garage-screen.component";
 import { CommonModule } from "@angular/common";
 import { GarageScreenRoutingModule } from "./garage-screen-routing.module";
 import { HttpClientModule } from "@angular/common/http";
+import { ProductCardModule } from "src/app/components/product-card/product-card.module";
 
 @NgModule({
     declarations: [
@@ -11,7 +12,8 @@ import { HttpClientModule } from "@angular/common/http";
     imports: [
         CommonModule,
         GarageScreenRoutingModule,
-        HttpClientModule
+        HttpClientModule,
+        ProductCardModule
     ]
 })
 export class GarageScreenModule {}

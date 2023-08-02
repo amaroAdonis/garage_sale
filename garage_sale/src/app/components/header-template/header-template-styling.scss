@@ -4,7 +4,11 @@
     @media screen and (max-width: 900px) {
 
         .page-template{
-            height: 100%;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            
+            
 
             header {
                 height: 50px;
@@ -215,17 +219,21 @@
                 
             }
 
-            body{
-                .content-body{
-                    height: 80vh;
-                }
+            .content-body{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                flex: 1;
             }
+
+            
 
             footer{
                 
                 .footer-container{
                     width: 100%;
-                    height: 15vh;
+                    height: 10vh;
                     background-color: rgb(217, 196, 60);
                     display: flex;
                     align-items: center;
@@ -264,7 +272,11 @@
        
 
         .page-template{
-            height: 100%;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+           
+            
 
 
 
@@ -421,12 +433,14 @@
                 
             }
 
-            body{
-                .content-body{
-                    height: 80vh;
-                    margin-bottom: 30px;
-                }
+            .content-body{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                flex: 1;
             }
+
 
             footer{
                 .footer-container{

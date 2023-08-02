@@ -1,36 +1,31 @@
 :host {
-
-    *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-
-    }
-    
-    
+        
     .container{
+        
         display: flex;
         justify-content: center;
         align-items: center;
-        .garages-carousel{
-            
-            ngb-carousel{
-                width: 200px;
-                height: 200px;
+        flex-direction: column;
+        width: 100%;
 
-                ng-template{
+        .garages{
 
-                    .picsum-img-wrapper{
-                        img{
-                            width: 200px;
-                            height: 200px;
-                        }
-                    }
-
-                }
+            margin-top: 50px;
+            h2{
+                text-align: center;
             }
 
         }
+
+        .products{
+            margin-top: 50px;
+            
+            h2{
+                text-align: center;
+            }
+        }
+
+
    
     }
 }

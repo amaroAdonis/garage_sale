@@ -11,7 +11,7 @@ public class User {
     private String firstName;
     private String lastName;
     private String email;
-    private Date birthday;
+    private String birthday;
     private String uf;
     private String city;
     private String profileImage;
@@ -19,7 +19,7 @@ public class User {
     public User() {
     }
 
-    public User(Integer id, String userName, String firstName, String lastName, String email, Date birthday, String uf, String city, String profileImage) {
+    public User(Integer id, String userName, String firstName, String lastName, String email, String birthday, String uf, String city, String profileImage) {
         this.id = id;
         this.userName = userName;
         this.firstName = firstName;
@@ -71,11 +71,11 @@ public class User {
         this.email = email;
     }
 
-    public Date getBirthday() {
+    public String getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(Date birthday) {
+    public void setBirthday(String birthday) {
         this.birthday = birthday;
     }
 

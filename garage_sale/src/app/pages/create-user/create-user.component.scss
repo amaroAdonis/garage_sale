@@ -1,5 +1,13 @@
 :host {
 
+    input.ng-invalid{
+        border-color: red;
+    }
+
+    textarea.ng-invalid{
+        border-color: red;
+    }
+
     
 
     h2{

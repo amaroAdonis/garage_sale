@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HeaderTemplateModule } from './components/header-template/header-template.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import { AdminModule } from './admin/admin.module';
 
 
 
@@ -22,6 +22,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HeaderTemplateModule,
     FormsModule,
     ReactiveFormsModule,
+    AdminModule
   ],
   
   providers: [],

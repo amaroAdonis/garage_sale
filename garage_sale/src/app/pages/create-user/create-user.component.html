@@ -1,10 +1,10 @@
-<h2>Insira seus dados</h2>
+<h2>{{title}}</h2>
 
 <div [formGroup]="form" class="container">
 
     <div class="mb-3">
         <label class="form-label">Nome</label>
-        <input formControlName="name" type="text" class="form-control" placeholder="Primeiro nome...">
+        <input formControlName="firstName" type="text" class="form-control" placeholder="Primeiro nome...">
       </div>
       <div class="mb-3">
         <label class="form-label">Sobrenome</label>
@@ -12,7 +12,7 @@
       </div>
       <div class="mb-3">
         <label class="form-label">Nome de usuário</label>
-        <input formControlName="username" type="text" class="form-control" placeholder="Como quer ser chamado(a)...">
+        <input formControlName="userName" type="text" class="form-control" placeholder="Como quer ser chamado(a)...">
       </div>
       <div class="mb-3">
         <label class="form-label">E-mail</label>
@@ -31,8 +31,8 @@
         <input formControlName="city" type="text" class="form-control" placeholder="Terra do nunca">
       </div>
       <div class="mb-3">
-        <label class="form-label">Estado</label>
-        <input formControlName="state" type="text" class="form-control" placeholder="Estado">
+        <label class="form-label">UF</label>
+        <input formControlName="uf" type="text" class="form-control" placeholder="AA" maxlength="3">
       </div>
       <div class="mb-3">
         <label class="form-label">Senha</label>

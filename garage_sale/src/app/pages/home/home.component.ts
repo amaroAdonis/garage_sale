@@ -9,7 +9,25 @@ export class HomeComponent {
 
   
 
-  images = [944, 1011, 984].map((n) => `https://picsum.photos/id/${n}/900/500`);
+  images = [
+    {
+      imageSrc: 'assets/imgs/ex1.jpg',
+      imageAlt: 'ex1',
+    },
+    {
+      imageSrc: 'assets/imgs/ex2.jpg',
+      imageAlt: 'ex4',
+    },
+    {
+      imageSrc: 'assets/imgs/ex3.jpg',
+      imageAlt: 'ex3',
+    },
+    {
+      imageSrc: 'assets/imgs/logo.png',
+      imageAlt: 'logo',
+    }
+
+  ]
 
 
 

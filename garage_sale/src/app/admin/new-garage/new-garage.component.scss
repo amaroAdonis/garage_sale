@@ -1,13 +1,15 @@
 :host{
 
-    .title{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 50px;
-    }
+    
 
     .container{
+
+        .title{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
 
         .garage-name{
 
@@ -28,7 +30,7 @@
                 }
 
                 textarea{
-                    height: 100px;
+                    height: 70px;
                 }
             }
             margin-bottom: 30px;
@@ -45,7 +47,7 @@
         }
 
         .adress-board{
-            margin-bottom: 30px;
+            margin-bottom: 15px;
 
             .adress-box{
                 
@@ -86,7 +88,7 @@
         }
 
         .buttons{
-            padding-top: 30px;
+            padding-top: 20px;
             
 
             .btn.btn-primary{

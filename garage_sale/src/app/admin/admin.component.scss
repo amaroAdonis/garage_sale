@@ -4,12 +4,12 @@
         background-color: rgba(167, 167, 167, 0.082);
         border-radius: 10px;
         margin-top: 2rem;
-
-        padding: 2rem;
+        position: relative;
+        
 
         .user-profile {
 
-            padding-top: 3rem;
+            padding-top: 1rem;
             display: flex;
             flex-direction: row-reverse;
 
@@ -52,40 +52,10 @@
         }
 
         .garages{
+            position: relative;
 
             display: flex;
 
-            .card.mb-3 {
-                width: 200px;
-                height: 200px;
-                margin-left: 10px;
-
-                .card-title{
-                    cursor: pointer;
-                    display: flex;
-                    align-self: center;
-                    margin-bottom: 0;
-                }
-                .card-img-top{
-                    cursor: pointer;
-                    height: 100px;
-                    width: 200px;
-                }
-                .card-text{
-                    margin-bottom: 0;
-                }
-                .card-body{
-                    padding: 5px;
-                    justify-content: center;
-                }
-                &.active, &:hover {
-                    background-color: #d9d93a88;
-                    border-radius: 5px;
-                    align-items: center;
-                    justify-content: center;
-                    padding: 5px;
-                }
-            }
         }
         
         .my-orders-title {

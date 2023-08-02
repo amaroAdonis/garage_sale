@@ -1,25 +1,25 @@
-
-<div class="title">
-  <h2>Faça seu login ou cadastre-se:</h2>
+<div class="container">
+  <div class="form">
+    <form>
+      <div class="title">
+        <h2>Faça seu login ou cadastre-se:</h2>
+      </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input type="email" class="form-control" formControlName="email" id="exampleInputEmail1">
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input type="password" class="form-control" formControlName="password" id="exampleInputPassword1">
+        </div>
+        <button type="button" class="btn btn-primary" (click)="login()">Submit</button>
+        <button type="cancel" class="btn btn-secondary">Cancel</button>
+    </form>
+  </div>
+  <div class="link-above">
+    <a class="sign" routerLinkActive="active" routerLink="/novo-usuario">Cadastre-se</a>
+    <a >|</a>
+    <a class="forget" routerLinkActive="active" routerLink="/forget-password">Esqueceu a senha?</a>
+  </div>
 </div>
 
-<form class="container" >
- 
-
-    <div class="mb-3">
-      <label for="exampleInputEmail1" class="form-label">Email address</label>
-      <input type="email" class="form-control" formControlName="email" id="exampleInputEmail1">
-    </div>
-    <div class="mb-3">
-      <label for="exampleInputPassword1" class="form-label">Password</label>
-      <input type="password" class="form-control" formControlName="password" id="exampleInputPassword1">
-    </div>
-    <button type="button" class="btn btn-primary" (click)="login()">Submit</button>
-    <button type="cancel" class="btn btn-secondary">Cancel</button>
-</form>
-
-<div class="link-above">
-  <a class="sign" routerLinkActive="active" routerLink="/novo-usuario">Cadastre-se</a>
-  <a >|</a>
-  <a class="forget" routerLinkActive="active" routerLink="/forget-password">Esqueceu a senha?</a>
-</div>
