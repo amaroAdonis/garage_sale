@@ -7,7 +7,7 @@
             <div class="row">
                 <div class="col">
                     <h5>Selecione uma categoria</h5>
-                        <select class="items"> 
+                        <select formControlName="category" class="items"> 
                             <option></option>
                             <option>Auto peças</option>
                             <option>Móveis</option>
@@ -43,7 +43,7 @@
         
             <div class="description">
                 <h5>Descrição</h5>
-                <textarea name="description" id="" cols="30" rows="10"></textarea>
+                <textarea name="description" formControlName="description" id="" cols="30" rows="10"></textarea>
             </div>
         
             <div class="value">
@@ -53,36 +53,41 @@
         </div>
         <div class="right-itens">
             <div class="upload-images">
-                <input type="file" accept=".gif, .jpg, .jpeg, .png" multiple="">
-                <input type="file" accept=".gif, .jpg, .jpeg, .png" multiple="">
-                <input type="file" accept=".gif, .jpg, .jpeg, .png" multiple="">
-                <input type="file" accept=".gif, .jpg, .jpeg, .png" multiple="">
+                <input formControlName="image1" type="file" accept=".gif, .jpg, .jpeg, .png" multiple="">
+                <input formControlName="image2" type="file" accept=".gif, .jpg, .jpeg, .png" multiple="">
+                <input formControlName="image3" type="file" accept=".gif, .jpg, .jpeg, .png" multiple="">
+                <input formControlName="image4" type="file" accept=".gif, .jpg, .jpeg, .png" multiple="">
             </div>
         
             <div class="extra-data">
                 
                 <div class="check">
-                    <input type="checkbox" name="delivery" id="delivery">
+                    <input formControlName="delivery" type="checkbox" name="delivery" id="delivery">
+                    <input type="hidden" name="delivery" formControlName="delivery" value="false" id="fiscal">
                     <label for="delivery">Realiza entrega ou envio</label>
                 </div>
         
                 <div class="check">
-                    <input type="checkbox" name="nodelivery" id="nodelivery">
-                    <label for="nodelivery">Somente para retirada no local</label>
+                    <input formControlName="noDelivery" type="checkbox" name="noDelivery" id="nodelivery">
+                    <input type="hidden" name="noDelivery" formControlName="noDelivery" value="false" id="fiscal">
+                    <label for="noDelivery">Somente para retirada no local</label>
                 </div>
                 <div class="check">
-                    <input type="checkbox" name="new" id="new">
-                    <label for="label">Novo</label>
+                    <input formControlName="newOne" type="checkbox" name="newOne" id="newOne">
+                    <input type="hidden" name="newOne" formControlName="newOne" value="false" id="fiscal">
+                    <label for="newOne">Novo</label>
                 </div>
         
                 <div class="check">
-                    <input type="checkbox" name="used" id="used">
+                    <input formControlName="used" type="checkbox" name="used" id="used">
+                    <input type="hidden" name="used" formControlName="used" value="false" id="fiscal">
                     <label for="used">Usado</label>
                 </div>
         
                 <div class="check">
-                    <input type="checkbox" name="nf" id="nf">
-                    <label for="nf">Com nota fiscal</label>
+                    <input formControlName="fiscal" type="checkbox" name="fiscal" id="fiscal">
+                    <input type="hidden" name="fiscal" formControlName="fiscal" value="false" id="fiscal">
+                    <label for="fiscal">Com nota fiscal</label>
                 </div>
             </div>
         

@@ -12,11 +12,16 @@ public class Product {
     private String profileImage2;
     private String profileImage3;
     private String profileImage4;
+    private Boolean delivery;
+    private Boolean noDelivery;
+    private Boolean newOne;
+    private Boolean used;
+    private Boolean fiscal;
 
     public Product() {
     }
 
-    public Product(Integer id, Integer garageId, String category, String title, String description, Double price, Double quantity, Double discount, String profileImage1, String profileImage2, String profileImage3, String profileImage4) {
+    public Product(Integer id, Integer garageId, String category, String title, String description, Double price, String profileImage1, String profileImage2, String profileImage3, String profileImage4, Boolean delivery, Boolean noDelivery, Boolean newOne, Boolean used, Boolean fiscal) {
         this.id = id;
         this.garageId = garageId;
         this.category = category;
@@ -27,7 +32,13 @@ public class Product {
         this.profileImage2 = profileImage2;
         this.profileImage3 = profileImage3;
         this.profileImage4 = profileImage4;
+        this.delivery = delivery;
+        this.noDelivery = noDelivery;
+        this.newOne = newOne;
+        this.used = used;
+        this.fiscal = fiscal;
     }
+
 
     public Integer getId() {
         return id;
@@ -107,5 +118,45 @@ public class Product {
 
     public void setProfileImage4(String profileImage4) {
         this.profileImage4 = profileImage4;
+    }
+
+    public Boolean getDelivery() {
+        return delivery;
+    }
+
+    public void setDelivery(Boolean delivery) {
+        this.delivery = delivery;
+    }
+
+    public Boolean getNoDelivery() {
+        return noDelivery;
+    }
+
+    public void setNoDelivery(Boolean noDelivery) {
+        this.noDelivery = noDelivery;
+    }
+
+    public Boolean getNewOne() {
+        return newOne;
+    }
+
+    public void setNewOne(Boolean newOne) {
+        this.newOne = newOne;
+    }
+
+    public Boolean getUsed() {
+        return used;
+    }
+
+    public void setUsed(Boolean used) {
+        this.used = used;
+    }
+
+    public Boolean getFiscal() {
+        return fiscal;
+    }
+
+    public void setFiscal(Boolean fiscal) {
+        this.fiscal = fiscal;
     }
 }

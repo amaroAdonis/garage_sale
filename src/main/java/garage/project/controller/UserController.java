@@ -26,7 +26,7 @@ public class UserController {
 
     @PostMapping("")
     public void createUser(@RequestBody User user) {
-        userDao.NewUser(user);
+        userDao.newUser(user);
     }
 
 

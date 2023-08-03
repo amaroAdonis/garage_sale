@@ -40,6 +40,11 @@ export class NewProductComponent implements OnInit {
     image2: new FormControl(null, [Validators.required]),
     image3: new FormControl(null, [Validators.required]),
     image4: new FormControl(null, [Validators.required]),
+    delivery: new FormControl(null, [Validators.required]),
+    noDelivery: new FormControl(null, [Validators.required]),
+    newOne: new FormControl(null, [Validators.required]),
+    used: new FormControl(null, [Validators.required]),
+    fiscal: new FormControl(null, [Validators.required]), 
     
   })
 

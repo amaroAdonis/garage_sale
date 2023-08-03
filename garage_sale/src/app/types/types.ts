@@ -20,7 +20,12 @@ export interface Product {
     image1: string,
     image2: string,
     image3: string,
-    image4: string
+    image4: string,
+    delivery: boolean,
+    noDelivery:boolean,
+    newOne: boolean,
+    used: boolean,
+    fiscal: boolean
 }
 
 export interface Garage {
