@@ -28,18 +28,18 @@ public class PurchaseItensDao {
         return purchaseItens;
     }
 
+    public void newPurchaseItens(PurchaseItens purchaseItens) {
+        String sql = "INSERT INTO purchase_itens(purchase_id, product_id, quantity, price, discount) values(?, ?, ?, ?, ?)";
+        jdbcTemplate.update(sql, purchaseItens.getPurchaseId(), purchaseItens.getProductId(), purchaseItens.getQuantity(), purchaseItens.getPrice(), purchaseItens.getDiscount());
+    }
+
     public List<PurchaseItens> findAll(){
         String sql = "SELECT * FROM purchase_itens";
         return jdbcTemplate.query(sql, this::getPurchaseItensFromResultSet);
     }
 
-    public PurchaseItens findById(Integer id) throws SQLException {
-        String sql = "SELECT * FROM purchase_itens WHERE id = ?";
-        return jdbcTemplate.queryForObject(sql, this::getPurchaseItensFromResultSet);
-    }
-
     public void deleteById(Integer id) {
-        String sql = "DELETE FROM purchase_itens WHERE id = ?";
+        String sql = "DELETE FROM purchase_itens WHERE purchase_id = ? AND product_id = ?";
         jdbcTemplate.update(sql, id);
     }
 

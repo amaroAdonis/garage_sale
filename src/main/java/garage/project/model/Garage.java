@@ -4,6 +4,7 @@ public class Garage {
 
     private Integer id;
     private Integer userId;
+    private String title;
     private String description;
     private Integer zipcode;
     private String profileImage;
@@ -12,9 +13,10 @@ public class Garage {
     public Garage() {
     }
 
-    public Garage(Integer id, Integer userId, String description, Integer zipcode, String profileImage, String backgroundImage) {
+    public Garage(Integer id, Integer userId, String title, String description, Integer zipcode, String profileImage, String backgroundImage) {
         this.id = id;
         this.userId = userId;
+        this.title = title;
         this.description = description;
         this.zipcode = zipcode;
         this.profileImage = profileImage;
@@ -35,6 +37,14 @@ public class Garage {
 
     public void setUserId(Integer userId) {
         this.userId = userId;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public String getDescription() {

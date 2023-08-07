@@ -47,7 +47,7 @@ public class UserDao {
 
     public User findById(Integer id) throws SQLException {
         String sql = "SELECT * FROM user WHERE id = ?";
-        return jdbcTemplate.queryForObject(sql, this::getUserFromResultSet);
+        return jdbcTemplate.queryForObject(sql, this::getUserFromResultSet, id);
     }
 
     public void deleteById(Integer id) {
@@ -63,6 +63,11 @@ public class UserDao {
     public User getUserByEmail(String email) {
         String sql = "SELECT * FROM user WHERE email = ?";
         return jdbcTemplate.queryForObject(sql, this::getUserFromResultSet, email);
+    }
+
+    public void update(User user) {
+        String sql = "UPDATE user SET first_name = ?, last_name = ?, uf = ?, city = ?, profile_image = ? WHERE id = ?";
+        jdbcTemplate.update(sql, user.getFirstName(), user.getLastName(), user.getUf(), user.getCity(), user.getProfileImage(), user.getId());
     }
 
 

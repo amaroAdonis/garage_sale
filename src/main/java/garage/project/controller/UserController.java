@@ -29,6 +29,14 @@ public class UserController {
         userDao.newUser(user);
     }
 
+    @DeleteMapping
+    public void deleteUser(@RequestBody Integer id) {userDao.deleteById(id);}
+
+    @PutMapping
+    public void update(@PathVariable Integer id, @RequestBody User user) {
+        userDao.update(user);
+    }
+
 
 
 
